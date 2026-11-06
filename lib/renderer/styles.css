@@ -1,0 +1,440 @@
+/*
+ * ConnectLocal for Pressable. Colours lean on currentColor/transparency so the panel follows Local's light and dark
+ * themes. The accent is Pressable orange (#dd3a03) for lines and outlines; text links use a slightly lighter tint so they stay
+ * readable on Local's dark theme as well as its light one.
+ */
+
+.PRConnect {
+	--pr-accent: #dd3a03;
+	--pr-accent-text: #e5541f;
+	padding: 20px 30px 30px;
+	max-width: 720px;
+	font-size: 14px;
+	line-height: 1.45;
+}
+
+.PRConnect_Title {
+	margin-bottom: 14px;
+}
+
+.PRConnect_SectionTitle {
+	margin: 22px 0 10px;
+}
+
+.PRConnect_Intro {
+	margin: 0 0 16px;
+	opacity: 0.8;
+}
+
+.PRConnect_Tabs {
+	display: flex;
+	gap: 4px;
+	margin-bottom: 18px;
+	border-bottom: 1px solid rgba(127, 127, 127, 0.3);
+}
+
+.PRConnect_Tab {
+	appearance: none;
+	background: none;
+	border: 0;
+	border-bottom: 2px solid transparent;
+	color: inherit;
+	cursor: pointer;
+	font: inherit;
+	font-weight: 600;
+	margin-bottom: -1px;
+	opacity: 0.65;
+	padding: 8px 12px;
+}
+
+.PRConnect_Tab.is-active {
+	border-bottom-color: var(--pr-accent);
+	opacity: 1;
+}
+
+.PRConnect_Tab:focus-visible {
+	outline: 2px solid var(--pr-accent);
+	outline-offset: 2px;
+}
+
+.PRConnect_Form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.PRConnect_Row {
+	display: grid;
+	grid-template-columns: 1fr 90px;
+	gap: 12px;
+}
+
+.PRConnect_Field {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.PRConnect_FieldLabel {
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.PRConnect_Help {
+	font-size: 12px;
+	opacity: 0.7;
+}
+
+.PRConnect_Help a,
+.PRConnect_Intro a {
+	color: var(--pr-accent-text);
+}
+
+/*
+ * Fully styled instead of the native macOS control, which has a fixed height and clips padded text. The
+ * chevron is a mid-grey that reads on both themes; color-scheme keeps the popup menu in Local's theme.
+ */
+.PRConnect_Select {
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23999' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	background-position: right 14px center;
+	background-repeat: no-repeat;
+	border: 1px solid rgba(127, 127, 127, 0.45);
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: inherit;
+	color-scheme: light dark;
+	cursor: pointer;
+	font: inherit;
+	height: auto;
+	line-height: 1.4;
+	min-height: 44px;
+	overflow: hidden;
+	padding: 10px 40px 10px 14px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.PRConnect_Select:hover {
+	border-color: rgba(127, 127, 127, 0.7);
+}
+
+.PRConnect_Select:focus-visible {
+	border-color: var(--pr-accent);
+	outline: none;
+	box-shadow: 0 0 0 1px var(--pr-accent);
+}
+
+.PRConnect_AuthChoice {
+	display: flex;
+	gap: 20px;
+}
+
+.PRConnect_AuthChoice label {
+	cursor: pointer;
+}
+
+.PRConnect_KeyBox {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 6px;
+}
+
+.PRConnect_KeyText {
+	background: rgba(127, 127, 127, 0.08);
+	border: 1px solid rgba(127, 127, 127, 0.35);
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: inherit;
+	font-family: Menlo, Consolas, monospace;
+	font-size: 11px;
+	padding: 8px;
+	resize: none;
+	width: 100%;
+	word-break: break-all;
+}
+
+.PRConnect_Account {
+	align-items: center;
+	display: flex;
+	gap: 12px;
+	justify-content: space-between;
+}
+
+.PRConnect_Table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.PRConnect_Table th,
+.PRConnect_Table td {
+	border-bottom: 1px solid rgba(127, 127, 127, 0.2);
+	padding: 8px 0;
+	text-align: left;
+	vertical-align: top;
+}
+
+.PRConnect_Table th {
+	font-weight: 600;
+	padding-right: 20px;
+	white-space: nowrap;
+	width: 130px;
+}
+
+.PRConnect_Table td {
+	word-break: break-all;
+}
+
+.PRConnect_Options {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.PRConnect_Consequences {
+	margin: 16px 0 0;
+	opacity: 0.8;
+	padding-left: 18px;
+}
+
+.PRConnect_Actions {
+	align-items: center;
+	display: flex;
+	gap: 16px;
+	margin-top: 16px;
+}
+
+.PRConnect_Secondary {
+	align-items: center;
+	border-top: 1px solid rgba(127, 127, 127, 0.2);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	margin-top: 24px;
+	padding-top: 16px;
+}
+
+.PRConnect_Busy {
+	align-items: center;
+	display: flex;
+	gap: 10px;
+	opacity: 0.8;
+}
+
+.PRConnect_Error,
+.PRConnect_Warning,
+.PRConnect_Success {
+	border-radius: 4px;
+	font-size: 13px;
+	margin-top: 12px;
+	padding: 10px 12px;
+	white-space: pre-wrap;
+}
+
+.PRConnect_Error {
+	background: rgba(226, 67, 67, 0.12);
+	border: 1px solid rgba(226, 67, 67, 0.45);
+}
+
+.PRConnect_Warning {
+	background: rgba(241, 177, 66, 0.14);
+	border: 1px solid rgba(241, 177, 66, 0.45);
+}
+
+.PRConnect_Success {
+	background: rgba(81, 187, 123, 0.12);
+	border: 1px solid rgba(81, 187, 123, 0.45);
+}
+
+.PRConnect_Modal {
+	padding: 10px 10px 0;
+	text-align: left;
+	width: 520px;
+	max-width: 100%;
+}
+
+.PRConnect_Tabs--Transfer {
+	margin-top: 24px;
+}
+
+.PRConnect_HeaderButtons {
+	align-items: center;
+	display: inline-flex;
+	gap: 8px;
+	margin-left: 10px;
+}
+
+.PRConnect_HeaderLabel {
+	font-size: 12px;
+	font-weight: 600;
+	opacity: 0.7;
+}
+
+.PRConnect_HeaderButton {
+	white-space: nowrap;
+}
+
+/* Compare & sync */
+
+.PRConnect_Actions--Top {
+	margin-top: 0;
+}
+
+.PRConnect_Summary {
+	font-weight: 600;
+	margin: 16px 0 10px;
+}
+
+.PRConnect_Filter {
+	margin-bottom: 12px;
+}
+
+.PRConnect_Group {
+	border: 1px solid rgba(127, 127, 127, 0.25);
+	border-radius: 4px;
+	margin-bottom: 12px;
+	max-height: 360px;
+	overflow-y: auto;
+}
+
+.PRConnect_GroupHeader {
+	align-items: center;
+	background: rgba(127, 127, 127, 0.08);
+	cursor: pointer;
+	display: flex;
+	font-weight: 600;
+	gap: 8px;
+	padding: 8px 10px;
+	position: sticky;
+	top: 0;
+}
+
+.PRConnect_FileRow {
+	align-items: baseline;
+	border-top: 1px solid rgba(127, 127, 127, 0.15);
+	cursor: pointer;
+	display: grid;
+	gap: 4px 8px;
+	grid-template-columns: auto 1fr;
+	padding: 6px 10px;
+}
+
+.PRConnect_FileRow:hover {
+	background: rgba(127, 127, 127, 0.06);
+}
+
+.PRConnect_FilePath {
+	font-family: Menlo, Consolas, monospace;
+	font-size: 12px;
+	overflow-wrap: anywhere;
+}
+
+.PRConnect_FileMeta {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 12px;
+	gap: 4px 12px;
+	grid-column: 2;
+	opacity: 0.75;
+}
+
+.PRConnect_Badge {
+	border: 1px solid currentColor;
+	border-radius: 10px;
+	font-size: 11px;
+	font-weight: 600;
+	padding: 0 7px;
+}
+
+.PRConnect_Badge--local {
+	color: #3b82c4;
+}
+
+.PRConnect_Badge--remote {
+	color: var(--pr-accent-text);
+}
+
+.PRConnect_SyncBar {
+	background: inherit;
+	bottom: 0;
+	justify-content: flex-end;
+	padding: 10px 0;
+	position: sticky;
+}
+
+.PRConnect_SyncBar > span {
+	margin-right: auto;
+	opacity: 0.8;
+}
+
+/* Pull to a new site */
+
+.PRConnect_NewSite {
+	margin: 0 auto;
+	max-width: 640px;
+	padding-top: 30px;
+}
+
+.PRConnect_NewSiteHeader {
+	align-items: center;
+	display: flex;
+	gap: 16px;
+	margin-bottom: 8px;
+}
+
+.PRConnect_NewSiteHeader .PRConnect_Title {
+	margin-bottom: 0;
+}
+
+/* Update notice and version line */
+.PRConnect_Update {
+	background: rgba(221, 58, 3, 0.08);
+	border: 1px solid rgba(221, 58, 3, 0.35);
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	font-size: 13px;
+	gap: 8px;
+	margin: 0 0 16px;
+	padding: 10px 12px;
+}
+
+.PRConnect_UpdateActions {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.PRConnect_Version {
+	align-items: center;
+	border-top: 1px solid rgba(127, 127, 127, 0.2);
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 12px;
+	gap: 12px;
+	margin-top: 32px;
+	opacity: 0.75;
+	padding-top: 12px;
+}
+
+/* Tools tab entry: host name plus a check while the site is linked. */
+.PRConnect_MenuLabel {
+	align-items: center;
+	display: inline-flex;
+	gap: 6px;
+}
+
+.PRConnect_LinkedCheck {
+	flex-shrink: 0;
+	height: 14px;
+	stroke: #51bb7b;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 2.25;
+	width: 14px;
+}

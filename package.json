@@ -1,0 +1,48 @@
+{
+  "name": "local-addon-pressable-connect",
+  "productName": "ConnectLocal for Pressable",
+  "version": "1.0.0",
+  "description": "Push Local sites (wp-content files, database, or both) to WordPress sites on Pressable and pull them back, the same way Local Connect works with WP Engine and Flywheel.",
+  "author": "Marcus Burnette",
+  "license": "MIT",
+  "repository": "github:mburnette/local-addon-pressable-connect",
+  "keywords": [
+    "local-addon"
+  ],
+  "main": "lib/main.js",
+  "renderer": "lib/renderer.js",
+  "engines": {
+    "local-by-flywheel": ">=6.0.0"
+  },
+  "bgColor": "#dd3a03",
+  "icon": "icon.svg",
+  "files": [
+    "lib",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "test:e2e": "node --test test/e2e/*.e2e.js",
+    "lint": "node scripts/check-syntax.js",
+    "install-addon": "node scripts/install-addon.js",
+    "package": "npm pack",
+    "release": "node scripts/release.js"
+  },
+  "dependencies": {
+    "@getflywheel/local-components": "^17.8.2",
+    "lodash": "^4.18.1"
+  },
+  "bundleDependencies": [
+    "@getflywheel/local-components",
+    "lodash"
+  ],
+  "devDependencies": {
+    "jsdom": "^24.1.3",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^5.3.4"
+  }
+}
