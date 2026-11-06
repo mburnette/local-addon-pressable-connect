@@ -5,6 +5,8 @@ turns that section into the new version's entry and uses it as the GitHub releas
 
 ## Unreleased
 
+## 1.1.0 - 2026-11-05
+
 - First release.
 - Push a Local site's `wp-content` files, database, or both to a site on Pressable.
 - Pull them back into an existing Local site, or into a brand-new Local site.
@@ -19,3 +21,4 @@ turns that section into the new version's entry and uses it as the GitHub releas
 - **Tools → Pressable** shows a green check while the open site is linked.
 - Update checks: the add-on looks for new releases on GitHub when Local starts and every 12 hours, and shows an
   **Update** button in its panel when one is out. **Check for updates** at the bottom of the panel checks right away.
+

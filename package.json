@@ -1,7 +1,7 @@
 {
   "name": "local-addon-pressable-connect",
   "productName": "ConnectLocal for Pressable",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Push Local sites (wp-content files, database, or both) to WordPress sites on Pressable and pull them back, the same way Local Connect works with WP Engine and Flywheel.",
   "author": "Marcus Burnette",
   "license": "MIT",
